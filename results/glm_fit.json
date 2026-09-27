@@ -1,0 +1,37 @@
+{
+  "splits": {
+    "test": {
+      "policies": 135811,
+      "exposure": 71714.03770491524,
+      "claims_reported": 7050.0,
+      "claims_paid": 5170.0,
+      "risk_groups": 105920,
+      "amounts_missing": 1784
+    },
+    "train": {
+      "policies": 542202,
+      "exposure": 286646.0677580939,
+      "claims_reported": 29006.0,
+      "claims_paid": 21235.0,
+      "risk_groups": 422845,
+      "amounts_missing": 7332
+    }
+  },
+  "glm": {
+    "terms": 49,
+    "deviance": 131308.3530843774,
+    "aic": 172181.14229426882,
+    "iterations": 7,
+    "severity_deviance": 29829.086141664404,
+    "severity_dispersion": 12.358136412204018
+  },
+  "glm_plus": {
+    "terms": 59,
+    "deviance": 130437.3108104508,
+    "aic": 171330.10002033954,
+    "iterations": 7,
+    "severity_deviance": 29581.398496687154,
+    "severity_dispersion": 11.564924949206457
+  },
+  "spark_vs_statsmodels_max_coef_gap": 4.006217579899385e-11
+}

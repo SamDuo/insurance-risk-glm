@@ -1,0 +1,116 @@
+{
+  "accounts": 30000,
+  "default_rate": 0.2212,
+  "train": 21000,
+  "test": 9000,
+  "information_value": {
+    "recent_status": 0.862,
+    "months_late_6m": 0.839,
+    "worst_late_6m": 0.784,
+    "utilization": 0.051,
+    "credit_limit": 0.171,
+    "payment_ratio_3m": 0.173,
+    "balance_trend": 0.051
+  },
+  "characteristics_kept": [
+    "recent_status",
+    "months_late_6m",
+    "worst_late_6m",
+    "credit_limit",
+    "payment_ratio_3m"
+  ],
+  "excluded_for_explainability": {
+    "balance_trend": "U-shaped: flat balances default most; not explainable as a decline reason"
+  },
+  "base_points": 523.2262548282484,
+  "coefficients": {
+    "recent_status": -0.5932,
+    "months_late_6m": -0.1659,
+    "worst_late_6m": -0.334,
+    "credit_limit": -0.4736,
+    "payment_ratio_3m": -0.3318
+  },
+  "holdout": {
+    "auc": 0.7692719319975987,
+    "gini": 0.5385438639951974,
+    "ks": 0.4212288154449338,
+    "xgboost_auc": 0.786541075587755,
+    "xgboost_gini": 0.57308215117551,
+    "score_psi_train_vs_test": 0.0007614432805894574
+  },
+  "cutoff_score": 517.0995270830159,
+  "fairness_at_75pct_approval": {
+    "sex": {
+      "female": {
+        "accounts": 5484.0,
+        "approval_rate": 0.7629,
+        "default_rate_if_approved": 0.1181,
+        "actual_default_rate": 0.2044,
+        "predicted_default_rate": 0.2165,
+        "approval_ratio_vs_highest": 1.0
+      },
+      "male": {
+        "accounts": 3516.0,
+        "approval_rate": 0.7193,
+        "default_rate_if_approved": 0.134,
+        "actual_default_rate": 0.2474,
+        "predicted_default_rate": 0.2353,
+        "approval_ratio_vs_highest": 0.9428
+      }
+    },
+    "age": {
+      "30-44": {
+        "accounts": 4497.0,
+        "approval_rate": 0.7727,
+        "default_rate_if_approved": 0.1183,
+        "actual_default_rate": 0.2039,
+        "predicted_default_rate": 0.2091,
+        "approval_ratio_vs_highest": 1.0
+      },
+      "45+": {
+        "accounts": 1586.0,
+        "approval_rate": 0.7339,
+        "default_rate_if_approved": 0.1469,
+        "actual_default_rate": 0.2554,
+        "predicted_default_rate": 0.232,
+        "approval_ratio_vs_highest": 0.9498
+      },
+      "under 30": {
+        "accounts": 2917.0,
+        "approval_rate": 0.711,
+        "default_rate_if_approved": 0.121,
+        "actual_default_rate": 0.2293,
+        "predicted_default_rate": 0.2421,
+        "approval_ratio_vs_highest": 0.9201
+      }
+    }
+  },
+  "example_declines": [
+    {
+      "score": 459,
+      "reasons": [
+        "Recent payment is past due",
+        "Serious delinquency in the last 6 months",
+        "Number of late payments in the last 6 months",
+        "Credit limit is low"
+      ]
+    },
+    {
+      "score": 488,
+      "reasons": [
+        "Recent payment is past due",
+        "Serious delinquency in the last 6 months",
+        "Credit limit is low",
+        "Number of late payments in the last 6 months"
+      ]
+    },
+    {
+      "score": 517,
+      "reasons": [
+        "Serious delinquency in the last 6 months",
+        "Number of late payments in the last 6 months",
+        "Credit limit is low"
+      ]
+    }
+  ]
+}

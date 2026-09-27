@@ -1,0 +1,55 @@
+{
+  "tuning_validation_deviance": {
+    "frequency_depth_3": 0.23889233882021255,
+    "frequency_depth_5": 0.2386919400773509,
+    "frequency_depth_7": 0.2386610172872428,
+    "severity_depth_2": 1.4299043187590712,
+    "severity_depth_3": 1.4308236381744677,
+    "severity_depth_4": 1.4335993366051865
+  },
+  "frequency_depth": 7,
+  "severity_depth": 2,
+  "frequency_rounds": 297,
+  "severity_rounds": 28,
+  "split_experiment": {
+    "grouped_split": {
+      "glm_deviance": 0.23774842792112835,
+      "gbm_deviance": 0.23318083833662526,
+      "gbm_improvement_pct": 1.9211860303103105,
+      "test_rows_with_a_twin_in_train": 0.0
+    },
+    "random_split": {
+      "glm_deviance": 0.24338319384133952,
+      "gbm_deviance": 0.2388324915643131,
+      "gbm_improvement_pct": 1.869768493543972,
+      "test_rows_with_a_twin_in_train": 0.32202112171220376
+    }
+  },
+  "top_interactions": [
+    {
+      "feature_a": "DrivAge",
+      "feature_b": "BonusMalus",
+      "mean_abs_interaction": 0.0842721089720726
+    },
+    {
+      "feature_a": "BonusMalus",
+      "feature_b": "Region",
+      "mean_abs_interaction": 0.07174266874790192
+    },
+    {
+      "feature_a": "BonusMalus",
+      "feature_b": "VehBrand",
+      "mean_abs_interaction": 0.046203769743442535
+    },
+    {
+      "feature_a": "DrivAge",
+      "feature_b": "Region",
+      "mean_abs_interaction": 0.03382536396384239
+    },
+    {
+      "feature_a": "VehAge",
+      "feature_b": "BonusMalus",
+      "mean_abs_interaction": 0.03312014788389206
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "holdout": {
+    "policies": 135811,
+    "claims_closed_without_payment": 1784,
+    "actual_loss": 9751271.1,
+    "exposure": 71714.03770491804,
+    "mean_paid_severity": 1881.0322337962962,
+    "train_mean_paid_severity": 1996.6677365945436,
+    "share_of_loss_from_claims_over_50k": 0.1690528420680281,
+    "train_share_of_loss_from_claims_over_50k": 0.19304199049702994
+  },
+  "glm": {
+    "label": "GLM (champion)",
+    "off_balance_factor_from_train": 1.002365879070407,
+    "frequency_deviance": 0.2377484279211297,
+    "severity_deviance": 1.3032811126923214,
+    "claims_actual_over_predicted": 0.9677593824025275,
+    "gini": 0.3230725334230903,
+    "predicted_over_actual_loss": 1.0954395270022117,
+    "decile_actual_to_expected": [
+      1.296,
+      0.977,
+      0.917,
+      0.664,
+      0.727,
+      0.839,
+      1.057,
+      0.835,
+      0.982,
+      0.92
+    ]
+  },
+  "glmplus": {
+    "label": "GLM+ (GBM-informed)",
+    "off_balance_factor_from_train": 1.0022159897652587,
+    "frequency_deviance": 0.23638909435338032,
+    "severity_deviance": 1.3032811126923214,
+    "claims_actual_over_predicted": 0.9675522947228329,
+    "gini": 0.33620820711896426,
+    "predicted_over_actual_loss": 1.0959350911307417,
+    "decile_actual_to_expected": [
+      1.361,
+      1.045,
+      0.762,
+      0.703,
+      0.731,
+      0.905,
+      0.938,
+      1.062,
+      0.868,
+      0.908
+    ],
+    "severity_variant_with_plus_terms_deviance": 1.3091831690478468
+  },
+  "gbm": {
+    "label": "XGBoost (challenger)",
+    "off_balance_factor_from_train": 1.0179175169160655,
+    "frequency_deviance": 0.23318083833662526,
+    "severity_deviance": 1.3103530309934803,
+    "claims_actual_over_predicted": 0.9600966914521496,
+    "gini": 0.37800011790592736,
+    "predicted_over_actual_loss": 1.0955164807945366,
+    "decile_actual_to_expected": [
+      0.788,
+      0.852,
+      0.793,
+      0.775,
+      0.803,
+      1.015,
+      0.894,
+      0.807,
+      0.893,
+      1.052
+    ]
+  },
+  "gini_gbm_minus_glm": {
+    "estimate": 0.05492758448283708,
+    "ci_95": [
+      0.01809046877885139,
+      0.08824701544734893
+    ]
+  },
+  "gini_glmplus_minus_glm": {
+    "estimate": 0.013135673695873984,
+    "ci_95": [
+      0.004764609786494198,
+      0.022511885683299468
+    ]
+  },
+  "gini_gbm_minus_glmplus": {
+    "estimate": 0.041791910786963093,
+    "ci_95": [
+      0.010411527316086312,
+      0.07533190602893154
+    ]
+  },
+  "dislocation_glm_to_glmplus": {
+    "over_10pct": 0.45199578826457354,
+    "over_25pct": 0.11596998770349971
+  },
+  "dislocation_glm_to_gbm": {
+    "over_10pct": 0.7361333028988816,
+    "over_25pct": 0.39922392147911434
+  }
+}
